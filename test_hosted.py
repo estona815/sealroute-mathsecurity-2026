@@ -2,18 +2,20 @@ import io
 import json
 import unittest
 from unittest.mock import patch
-from hosted import request_model
+from hosted import request_model, SUBMISSION_MAX_BYTES, SSE_MAX_BYTES
 
 
 class FakeOpener:
-    def __init__(self, terminal):
+    def __init__(self, terminal, submission=None):
         self.calls = []
         self.terminal = terminal
+        self.submission = submission
 
     def open(self, request, **kwargs):
         self.calls.append(request)
         if len(self.calls) == 1:
-            return io.BytesIO(json.dumps({"event_id": "a" * 32}).encode())
+            return io.BytesIO(self.submission if self.submission is not None else
+                              json.dumps({"event_id": "a" * 32}).encode())
         return io.BytesIO(self.terminal)
 
 
@@ -50,6 +52,41 @@ class HostedBoundaryTests(unittest.TestCase):
             with self.assertRaisesRegex(RuntimeError, "No terminal"):
                 request_model("synthetic")
         self.assertEqual(len(opener.calls), 2)
+
+    def test_oversized_submission_stops_before_polling_and_callback(self):
+        opener = FakeOpener(b"", json.dumps({"event_id": "a" * 32,
+                            "padding": "x" * SUBMISSION_MAX_BYTES}).encode())
+        submitted = []
+        with patch("urllib.request.build_opener", return_value=opener):
+            with self.assertRaisesRegex(RuntimeError, "Oversized submission"):
+                request_model("synthetic", on_submitted=submitted.append)
+        self.assertEqual(len(opener.calls), 1)
+        self.assertEqual(submitted, [])
+
+    def assert_oversized_stream_rejected(self, terminal):
+        opener = FakeOpener(terminal)
+        with patch("urllib.request.build_opener", return_value=opener):
+            with self.assertRaisesRegex(RuntimeError, "Oversized SSE"):
+                request_model("synthetic")
+        self.assertEqual(len(opener.calls), 2)
+
+    def test_single_oversized_line_is_bounded(self):
+        self.assert_oversized_stream_rejected(b":" + b"x" * SSE_MAX_BYTES)
+
+    def test_sse_limit_counts_utf8_bytes_not_characters(self):
+        self.assert_oversized_stream_rejected((":" + "\u20ac" * 34000 + "\n").encode())
+
+    def test_sse_aggregate_limit_includes_heartbeat_bytes(self):
+        self.assert_oversized_stream_rejected(b": heartbeat\n" * 10000)
+
+    def test_invalid_submission_shape_does_not_poll_or_resubmit(self):
+        for submission in ([], {"event_id": 42}, {"event_id": "z" * 32}):
+            with self.subTest(submission=submission):
+                opener = FakeOpener(b"", json.dumps(submission).encode())
+                with patch("urllib.request.build_opener", return_value=opener):
+                    with self.assertRaisesRegex(RuntimeError, "Unexpected"):
+                        request_model("synthetic")
+                self.assertEqual(len(opener.calls), 1)
 
 
 if __name__ == "__main__":

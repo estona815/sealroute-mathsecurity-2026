@@ -24,7 +24,7 @@ The current model is Qwen/Qwen3-4B-Instruct-2507, remotely hosted by Zacheus10/f
 
 Earlier SmolLM2 CPU experiments returned malformed output or misclassified billing requests as account-access requests. The local boundary refused malformed output and left wrong-but-authorized proposals for review. A different hosted model then returned all six expected labels in one batch of synthetic paraphrases. A separate live terminal billing run completed proposal, explicit local approval and synthetic decryption with no delivery.
 
-Thirteen tests cover tampering, metadata binding, wrong keys, private-material exclusion, invalid proposals, local approval, per-session replay and bounded API result handling. Six successful designed scenarios are not a general accuracy benchmark. The included small raw outbound and result records allow inspection of what actually reached the provider.
+Eighteen tests cover tampering, metadata binding, wrong keys, private-material exclusion, invalid proposals, local approval, per-session replay and bounded API result handling. Six successful designed scenarios are not a general accuracy benchmark. The included small raw outbound and result records allow inspection of what actually reached the provider. A later transport revision enforces byte limits before reading oversized responses; its additional failure tests are offline and do not imply another live inference experiment.
 
 ## What the prototype establishes
 

@@ -4,13 +4,13 @@
   "files": [
     {
       "path": "README.md",
-      "bytes": 9294,
-      "sha256": "bd9fd11820466fc06e29d2d620141537319e46c7c00fc39feb5db56b7d10df93"
+      "bytes": 10015,
+      "sha256": "48c81e2a0e4a7755abd0e61c94f09bb61a15505c647b1820eeefd0b81a0ebe2d"
     },
     {
       "path": "SUBMISSION.md",
-      "bytes": 4268,
-      "sha256": "e465d1148105d50519c0c1f666f5b2031c4e196187574f210303a0f481594aff"
+      "bytes": 4445,
+      "sha256": "d415cf541d4be1f2b96751fb162beaec6fa60d82b7078eaafef24be3ce20a770"
     },
     {
       "path": "assets/architecture.jpg",
@@ -59,8 +59,8 @@
     },
     {
       "path": "hosted.py",
-      "bytes": 2474,
-      "sha256": "a7b32aa7fa35d30b14019e0ae1ad2c5275ea8e7c95bf1e9cf8b956f4d04d775c"
+      "bytes": 3081,
+      "sha256": "5a8ec6d5116e0c8691f545c40018855b9aff19021dd3cffa1294bc57573ce686"
     },
     {
       "path": "requirements.txt",
@@ -74,8 +74,8 @@
     },
     {
       "path": "test_hosted.py",
-      "bytes": 2416,
-      "sha256": "676b35ca7eb6564f73ac126f24fe2f503a8380a2fec6d0f393dd2601332601e9"
+      "bytes": 4432,
+      "sha256": "7b46c348bd65b9f2787a666d6e3dbfa49709209fdfde09ed3cdc658d96fd3de5"
     },
     {
       "path": "test_sealroute.py",
@@ -90,6 +90,6 @@
     "local paths",
     "interrupted unrelated workspace test artifacts",
     "prior unmodified prototype",
-    "misnamed local screenshot capture assets/architecture.png retained locally only"
+    "misnamed local screenshot capture v002/assets/architecture.png retained locally only"
   ]
 }
