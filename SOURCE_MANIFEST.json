@@ -4,13 +4,23 @@
   "files": [
     {
       "path": "README.md",
-      "bytes": 9242,
-      "sha256": "d862583ebad1b1e04c95fa85b88579d903beefa38129ef844e69da8aaa4c9460"
+      "bytes": 9294,
+      "sha256": "bd9fd11820466fc06e29d2d620141537319e46c7c00fc39feb5db56b7d10df93"
     },
     {
       "path": "SUBMISSION.md",
       "bytes": 4268,
       "sha256": "e465d1148105d50519c0c1f666f5b2031c4e196187574f210303a0f481594aff"
+    },
+    {
+      "path": "assets/architecture.jpg",
+      "bytes": 66029,
+      "sha256": "512bf48d555b3e4af95823fbe369b7dd70e75e68667561d3efa601e8e94db753"
+    },
+    {
+      "path": "assets/architecture.svg",
+      "bytes": 3156,
+      "sha256": "b40930d5f9b8f9ca53f55ed7e515df8bfa8dbee2320f6915a7d92b2986270dac"
     },
     {
       "path": "demo.py",
@@ -79,6 +89,7 @@
     "user information",
     "local paths",
     "interrupted unrelated workspace test artifacts",
-    "prior unmodified prototype"
+    "prior unmodified prototype",
+    "misnamed local screenshot capture assets/architecture.png retained locally only"
   ]
 }

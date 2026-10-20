@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9" fill="none" stroke="#16634c" stroke-width="1.5"/></marker></defs>
+<rect width="1200" height="675" fill="#f4f4ed"/>
+<circle cx="1090" cy="72" r="175" fill="#e4ebdd"/>
+<g font-family="Arial, Helvetica, sans-serif" fill="#183b30">
+<text x="64" y="63" font-size="22" font-weight="700" letter-spacing="3">SEALROUTE</text>
+<text x="1135" y="63" text-anchor="end" font-size="13" letter-spacing="1.5">SYNTHETIC PRIVACY PROTOTYPE</text>
+<text x="64" y="143" font-size="49" font-weight="700">AI suggests the queue.</text>
+<text x="64" y="201" font-size="49" font-weight="700">The key stays local.</text>
+<text x="66" y="243" font-size="19" fill="#52655a">A hosted model can propose a route without receiving the incident plaintext.</text>
+<rect x="64" y="292" width="320" height="244" rx="18" fill="#fff" stroke="#d5ddd0"/>
+<rect x="440" y="292" width="320" height="244" rx="18" fill="#183b30"/>
+<rect x="816" y="292" width="320" height="244" rx="18" fill="#fff" stroke="#d5ddd0"/>
+<path d="M394 414 H428 M770 414 H804" stroke="#16634c" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="90" y="327" font-size="12" letter-spacing="2" fill="#667466">01 / LOCAL CLIENT</text>
+<rect x="91" y="355" width="42" height="34" rx="6" fill="#e5eddc"/><path d="M100 356 V348 a12 12 0 0 1 24 0 v8" stroke="#16634c" stroke-width="3" fill="none"/><circle cx="112" cy="371" r="3" fill="#16634c"/>
+<text x="90" y="428" font-size="25" font-weight="700">Seal the body</text>
+<text x="90" y="465" font-size="16" fill="#52655a">AES-GCM + bound metadata</text>
+<text x="90" y="496" font-size="14" fill="#52655a">Session key stays in local memory</text>
+<text x="466" y="327" font-size="12" letter-spacing="2" fill="#b8cebf">02 / HOSTED MODEL</text>
+<text x="466" y="373" font-size="15" fill="#dce9df">Public intent + sealed envelope</text>
+<text x="466" y="409" font-size="15" fill="#dce9df">“Charged twice for one purchase”</text>
+<rect x="466" y="435" width="266" height="44" rx="8" fill="#d8ecaa"/>
+<text x="484" y="463" font-size="20" font-weight="700">Propose: BILLING</text>
+<text x="466" y="507" font-size="14" fill="#b8cebf">No decryption authority</text>
+<text x="842" y="327" font-size="12" letter-spacing="2" fill="#667466">03 / LOCAL REVIEW</text>
+<path d="M845 367 l12 12 22 -26" fill="none" stroke="#16634c" stroke-width="4"/>
+<text x="842" y="428" font-size="25" font-weight="700">Check, then approve</text>
+<text x="842" y="465" font-size="16" fill="#52655a">Allowlist + explicit operator review</text>
+<text x="842" y="496" font-size="14" fill="#52655a">Local recovery only · no delivery</text>
+<line x1="64" y1="579" x2="1136" y2="579" stroke="#d5ddd0"/>
+<text x="64" y="617" font-size="14" fill="#52655a">Public intent is visible to the provider. The model does not understand encrypted plaintext.</text>
+<text x="1136" y="647" text-anchor="end" font-size="12" fill="#6b786b">Illustrated architecture • not an application screenshot</text>
+</g></svg>

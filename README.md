@@ -1,5 +1,7 @@
 # SealRoute
 
+![SealRoute architecture](assets/architecture.jpg)
+
 Public source: https://github.com/estona815/sealroute-mathsecurity-2026
 
 A synthetic incident desk that separates an AI's routing suggestion from access to a private incident body. The local client encrypts the body, sends an opaque envelope and deliberately public intent to a hosted LLM, validates a proposed queue against local authority, and asks an operator before local review. It never delivers an incident or executes model commands.
