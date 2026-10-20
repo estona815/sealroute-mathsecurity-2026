@@ -1,0 +1,23 @@
+{
+  "event_id": "734e27e6445f40248e42248b32cc4fd4",
+  "terminal": "complete",
+  "response": "BILLING",
+  "sse": [
+    "event: generating",
+    "data: [\"\", null]",
+    "",
+    "event: generating",
+    "data: [\"\", null]",
+    "",
+    "event: generating",
+    "data: [\"\", null]",
+    "",
+    "event: generating",
+    "data: [\"BILLING\", null]",
+    "",
+    "event: complete",
+    "data: [\"BILLING\", null]"
+  ],
+  "model": "Qwen/Qwen3-4B-Instruct-2507",
+  "backend": "anonymous ZeroGPU daily quota"
+}

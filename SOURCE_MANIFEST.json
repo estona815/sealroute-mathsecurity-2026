@@ -1,0 +1,84 @@
+{
+  "project": "SealRoute",
+  "created_kst": "2026-10-21",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 9242,
+      "sha256": "d862583ebad1b1e04c95fa85b88579d903beefa38129ef844e69da8aaa4c9460"
+    },
+    {
+      "path": "SUBMISSION.md",
+      "bytes": 4268,
+      "sha256": "e465d1148105d50519c0c1f666f5b2031c4e196187574f210303a0f481594aff"
+    },
+    {
+      "path": "demo.py",
+      "bytes": 6046,
+      "sha256": "79d5e958e274ac608420068b56d27bc383e100d34c91348a4563e224f9ff2314"
+    },
+    {
+      "path": "evidence/six-case-outbound.json",
+      "bytes": 2575,
+      "sha256": "14509375344388a4773b5173d0e164508030ce6dc9240a5e1edcb0c9f7013fd7"
+    },
+    {
+      "path": "evidence/six-case-terminal.json",
+      "bytes": 2886,
+      "sha256": "652a1e6dd512af8e352045e0d4781ac972fe8ff533f9603733ecab8f781d27a4"
+    },
+    {
+      "path": "evidence/six-case-validation.json",
+      "bytes": 446,
+      "sha256": "42a019cc32387051339a87c208433e0e8abf611707cd184d58aeb1583ee2b1eb"
+    },
+    {
+      "path": "evidence/terminal-billing-outbound.json",
+      "bytes": 1206,
+      "sha256": "cb23d942c2e3cbb4f4b2df99dcf614f1c366f1226014d845c45fb2febd959dab"
+    },
+    {
+      "path": "evidence/terminal-billing-result.json",
+      "bytes": 505,
+      "sha256": "a2811236eb7395de0517c7c2f013774250681d691edfb54bbde50b89e016593b"
+    },
+    {
+      "path": "evidence/terminal-billing-review.json",
+      "bytes": 125,
+      "sha256": "16334b0f33918acb42567cdf3f075e13716d6d6ada54ac9ba621c265cde90b68"
+    },
+    {
+      "path": "hosted.py",
+      "bytes": 2474,
+      "sha256": "a7b32aa7fa35d30b14019e0ae1ad2c5275ea8e7c95bf1e9cf8b956f4d04d775c"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 21,
+      "sha256": "832a977b582192adda7bf81b97d71ed6e6a43d09a4ce414b8a1aa2813457cf6d"
+    },
+    {
+      "path": "sealroute.py",
+      "bytes": 5764,
+      "sha256": "ad045b1fb751fa97c47fae4981cd1b4facb0d3d9f685e0655c6d0ad80b278c8f"
+    },
+    {
+      "path": "test_hosted.py",
+      "bytes": 2416,
+      "sha256": "676b35ca7eb6564f73ac126f24fe2f503a8380a2fec6d0f393dd2601332601e9"
+    },
+    {
+      "path": "test_sealroute.py",
+      "bytes": 4208,
+      "sha256": "cde16cccc624599db62f990180cf7ed6c5d007ecc7002a6bc11086d8852ce49a"
+    }
+  ],
+  "excluded": [
+    "session keys",
+    "operational ledger",
+    "user information",
+    "local paths",
+    "interrupted unrelated workspace test artifacts",
+    "prior unmodified prototype"
+  ]
+}

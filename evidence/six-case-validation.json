@@ -1,0 +1,24 @@
+{
+  "event_id": "edabaca58b5c4b89906ebc060685e7b0",
+  "actual": [
+    "BILLING",
+    "DELIVERY",
+    "ACCESS",
+    "BILLING",
+    "DELIVERY",
+    "ACCESS"
+  ],
+  "expected": [
+    "BILLING",
+    "DELIVERY",
+    "ACCESS",
+    "BILLING",
+    "DELIVERY",
+    "ACCESS"
+  ],
+  "matches": 6,
+  "cases": 6,
+  "strict_json_array": true,
+  "limits": "Designed synthetic cases, one batch, no general accuracy or real-user claim.",
+  "no_deliveries": true
+}
