@@ -72,3 +72,26 @@ Codex authored this prototype and synthetic fixtures with AI assistance; no clai
 - Cryptography license: https://github.com/pyca/cryptography/blob/main/LICENSE
 
 The submission deadline observed in the signed-in Devpost header is 2026-11-01 23:00 KST. The rules table lists gallery opening after the winner-announcement date; preserve that conflict rather than inventing a corrected schedule.
+
+## Terminal-flow regression checks
+
+`python3 -m unittest -v` now includes eight integrated `demo.main()` flow tests
+in `test_demo.py` (26 tests total). They exercise the real session encryption,
+argument parsing and report writer with scripted terminal input and a stubbed
+hosted response. An unexpected attempt to construct the real HTTP client fails
+the flow test; no new hosted inference is performed.
+
+The checks cover noninteractive execution, operator cancellation, matching local
+approval, invalid model text, cancellation of a wrong-but-allowed proposal,
+terminal provider errors, polling uncertainty after the event ID is saved, and
+refusal to reuse a report directory. Only matching approval may decrypt once;
+plaintext is shown in the local terminal and excluded from saved JSON reports.
+A deliberately injected premature-decryption defect was detected by all seven
+tests that create a session; the existing-directory test stops before a session
+exists. These are designed control-flow checks, not real-user research or a
+security certification. The model and transport runtime are unchanged.
+
+The tests retain their small fictional report directories under the operating
+system's temporary directory with prefix `sealroute-cli-test-` for inspection.
+No session key is written to those reports.
+
